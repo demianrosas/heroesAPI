@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "cdb33dfa-46ce-4334-8e15-e53646478733",
+		"name": "Heroes",
+		"description": "Calls for the API of Heroes made in Rails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Heroes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes"
+					]
+				},
+				"description": "Get the list of heroes"
+			},
+			"response": []
+		},
+		{
+			"name": "New Hero",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Captain America",
+							"type": "text"
+						},
+						{
+							"key": "superpower",
+							"value": "Force",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "Marvel",
+							"type": "text"
+						},
+						{
+							"key": "alignment",
+							"value": "Hero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes"
+					]
+				},
+				"description": "Add a new Hero to the list"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Hero",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Captain America",
+							"type": "text"
+						},
+						{
+							"key": "superpower",
+							"value": "Strength and dexterity",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "Marvel",
+							"type": "text"
+						},
+						{
+							"key": "alignment",
+							"value": "Hero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				},
+				"description": "Update some of the data of one hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Hero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1"
+					]
+				},
+				"description": "Get a particular hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Partial Update Hero",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "superpower",
+							"value": "Strenght",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				},
+				"description": "Update one of the field of a hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Hero",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1"
+					]
+				},
+				"description": "Delete a hero from the list"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Missions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/1/missions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1",
+						"missions"
+					]
+				},
+				"description": "Get the list of missions of a particular hero"
+			},
+			"response": []
+		},
+		{
+			"name": "New Mission",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Defend NY from the aliens attack",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2019-06-28",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"type": "text"
+						},
+						{
+							"key": "place",
+							"value": "NY",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes/1/missions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1",
+						"missions"
+					]
+				},
+				"description": "Add a new mission to the list of mission of a particular hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Mission",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Defend NY from the aliens attack",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2019-06-30",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"type": "text"
+						},
+						{
+							"key": "place",
+							"value": "New York",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes/1/missions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1",
+						"missions",
+						"1"
+					]
+				},
+				"description": "Update the data of a mission of a particular hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mission",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/1/missions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1",
+						"missions",
+						"1"
+					]
+				},
+				"description": "Get a particular mission of a hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Partial Update Mission",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "status",
+							"value": "complete",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes/1/missions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1",
+						"missions",
+						"1"
+					]
+				},
+				"description": "Update an specific field of a mission of a hero"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Mission",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/1/missions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"1",
+						"missions",
+						"1"
+					]
+				},
+				"description": "Delete a mission of a hero"
+			},
+			"response": []
+		}
+	]
+}

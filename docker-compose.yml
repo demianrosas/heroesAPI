@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    command: bundle exec rails server -b 0.0.0.0 -p 3000
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    env_file:
+      - .env
+  db:
+    image: mysql:5.7.23
+    env_file:
+      - .env
+    ports:
+      - 3307:3306
+    volumes:
+      - db-data:/var/lib/mysql
+volumes:
+  db-data:
+    driver: local
